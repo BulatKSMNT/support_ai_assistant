@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f39">
+  <title>База · Помощник менеджера</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="На главную"><span class="brand-mark">б.</span><span>База<span class="brand-caption">помощник менеджера</span></span></a>
+    <div class="workspace-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+    <nav aria-label="Разделы">
+      <button class="nav-item active" data-tab="assistant" aria-current="page"><span>↗</span> Подготовить ответ</button>
+      <button class="nav-item" data-tab="knowledge"><span>▤</span> База знаний <span id="document-count" class="count">—</span></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="service-state"><span id="status-dot" class="dot"></span><span id="service-status">Нужен ключ доступа</span></div>
+      <details id="access-panel" open>
+        <summary>Доступ к сервису</summary>
+        <form id="access-form">
+          <label for="api-key">Ключ доступа</label>
+          <input id="api-key" type="password" autocomplete="off" placeholder="Введите ключ" required>
+          <button class="button secondary" type="submit">Подключиться</button>
+        </form>
+        <button id="logout" class="text-button" type="button" hidden>Забыть ключ</button>
+      </details>
+      <p class="sidebar-note">Ответы с опорой на документы.<br>Решение остаётся за вами.</p>
+    </div>
+  </aside>
+
+  <main>
+    <header class="topbar"><span>Клиентские обращения <span class="slash">/</span> Ассистент</span><span class="tag">Самостоятельный сервис</span></header>
+    <div id="notice" class="notice" role="alert" hidden></div>
+    <section id="assistant-tab" class="page">
+      <div class="page-heading"><div><div class="eyebrow">ОТ ВОПРОСА К ОТВЕТУ</div><h1>Найдём основание.<br><span>Подготовим ответ.</span></h1><p>Задайте вопрос или добавьте обращение клиента.<br>Помощник найдёт информацию в вашей базе знаний.</p></div><span class="step-label">01 — 02</span></div>
+      <div class="workbench">
+        <section class="card request-card" aria-labelledby="request-title">
+          <div class="card-heading"><h2 id="request-title"><span class="step">01</span> Ваш запрос</h2><button id="example" class="text-button" type="button">Учебный пример ↗</button></div>
+          <form id="draft-form">
+            <label for="question">Что нужно подготовить?</label>
+            <textarea id="question" rows="4" minlength="5" maxlength="2000" placeholder="Например: что уточнить перед заказом нестандартной комплектации?" required></textarea>
+            <details class="lead-details"><summary>Добавить данные заявки <span>необязательно</span></summary>
+              <label for="lead-reference">Номер заявки</label><input id="lead-reference" maxlength="100" placeholder="Например, DEMO-42">
+              <label for="lead-message">Обращение клиента</label><textarea id="lead-message" rows="4" maxlength="6000" placeholder="Текст обращения без лишних персональных данных"></textarea>
+              <label for="products">Товары</label><input id="products" maxlength="2000" placeholder="Названия через запятую">
+            </details>
+            <div class="form-footer"><p>Черновик появится справа вместе<br>с использованными источниками.</p><button id="generate" class="button primary" type="submit">Подготовить <span>↗</span></button></div>
+          </form>
+        </section>
+        <section class="card result-card" aria-labelledby="result-title" aria-live="polite">
+          <div class="card-heading"><h2 id="result-title"><span class="step">02</span> Результат</h2><button id="copy" class="text-button" type="button" hidden>Копировать</button></div>
+          <div id="empty-result" class="empty-state"><div class="paper-icon" aria-hidden="true"><i></i><i></i><i></i><span>✓</span></div><h3>Ответ начинается с фактов</h3><p>Здесь появится черновик.<br>Каждое основание можно проверить<br>по исходному документу.</p></div>
+          <div id="loading" class="loading" hidden><span class="spinner"></span><h3>Ищем и готовим ответ</h3><p>Обработка может занять несколько минут.<br>Страницу можно оставить открытой.</p></div>
+          <div id="result" hidden><div id="result-label" class="result-label"></div><div id="draft-text" class="draft-text"></div><div id="clarifications"></div><div id="missing"></div><div id="timing" class="timing"></div><p class="review-note">Проверьте факты и формулировки перед отправкой клиенту.</p></div>
+        </section>
+      </div>
+      <section id="sources-section" class="sources-section" hidden><div class="section-heading"><h2>На чём основан ответ</h2><span id="source-count"></span></div><div id="sources" class="sources-grid"></div></section>
+    </section>
+
+    <section id="knowledge-tab" class="page" hidden>
+      <div class="page-heading"><div><div class="eyebrow">ПРОВЕРЯЕМЫЕ ОСНОВАНИЯ</div><h1>Знания вашей<br><span>команды.</span></h1><p>Инструкции, условия работы и описания товаров.<br>Загрузите новую версию с тем же кодом, чтобы обновить документ.</p></div><span class="step-label">БАЗА ЗНАНИЙ</span></div>
+      <section class="card upload-card"><div class="card-heading"><h2>Добавить документ</h2><span class="tag">TXT · MD · PDF</span></div>
+        <form id="upload-form"><div class="upload-fields"><div><label for="document-title">Название</label><input id="document-title" minlength="3" maxlength="200" placeholder="Условия поставки" required></div><div><label for="document-key">Постоянный код</label><input id="document-key" pattern="[a-zA-Z0-9_.:\-]+" maxlength="120" placeholder="delivery-policy" required></div></div>
+          <div class="upload-footer"><label class="file-area" for="document-file"><span>↑ Выбрать документ</span><small>До 2 МБ. Текстовый PDF без пароля, до 50 страниц.</small><input id="document-file" type="file" accept=".txt,.md,.pdf" required></label><button id="upload-button" class="button primary" type="submit">Добавить в базу ↗</button></div>
+        </form>
+      </section>
+      <div class="section-heading"><h2>Документы</h2><button id="refresh" type="button" class="text-button">Обновить список ↻</button></div>
+      <div id="documents" class="documents"><p class="muted">Подключитесь к сервису, чтобы увидеть документы.</p></div>
+    </section>
+    <footer>База <span>·</span> Знания помогают. Решение принимает человек.</footer>
+  </main>
+</body>
+</html>

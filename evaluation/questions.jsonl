@@ -1,0 +1,22 @@
+{"id":"q01","query":"Что запросить у покупателя для нестандартных разъёмов?","expected_sources":["demo-intake"]}
+{"id":"q02","query":"Кто проверяет совместимость заказанной комплектации?","expected_sources":["demo-intake"]}
+{"id":"q03","query":"Как уточнить требования к нестандартному оборудованию?","expected_sources":["demo-intake"]}
+{"id":"q04","query":"Можно ли обещать клиенту отгрузку на следующей неделе?","expected_sources":["demo-delivery"]}
+{"id":"q05","query":"Какие данные нужны для расчёта стоимости доставки?","expected_sources":["demo-delivery"]}
+{"id":"q06","query":"Когда можно подтвердить точную дату поставки?","expected_sources":["demo-delivery"]}
+{"id":"q07","query":"Клиент хочет вернуть товар. Что нужно уточнить?","expected_sources":["demo-returns"]}
+{"id":"q08","query":"Что попросить при повреждении упаковки?","expected_sources":["demo-returns"]}
+{"id":"q09","query":"Можно ли сразу обещать возврат денег?","expected_sources":["demo-returns"]}
+{"id":"q10","query":"Какие сведения нужны при неисправности оборудования?","expected_sources":["demo-warranty"]}
+{"id":"q11","query":"Можно ли советовать разбирать неисправное оборудование?","expected_sources":["demo-warranty"]}
+{"id":"q12","query":"Где проверяют гарантийный срок конкретной поставки?","expected_sources":["demo-warranty"]}
+{"id":"q13","query":"Чем отличаются Модуль А и Модуль Б?","expected_sources":["demo-products"]}
+{"id":"q14","query":"Какой модуль подходит для помещения с пылью и брызгами?","expected_sources":["demo-products"]}
+{"id":"q15","query":"Какое напряжение питания у Модуля А?","expected_sources":["demo-products"]}
+{"id":"q16","query":"Какие реквизиты нужны для выставления счёта организации?","expected_sources":["demo-payment"]}
+{"id":"q17","query":"Применяется ли скидка автоматически при большом заказе?","expected_sources":["demo-payment"]}
+{"id":"q18","query":"Можно ли подтвердить поступление оплаты по базе знаний?","expected_sources":["demo-payment"]}
+{"id":"n01","query":"Сколько спутников у Юпитера?","expected_sources":[]}
+{"id":"n02","query":"Кто написал роман Евгений Онегин?","expected_sources":[]}
+{"id":"n03","query":"Какая погода завтра в Казани?","expected_sources":[]}
+{"id":"n04","query":"Как приготовить шоколадный торт?","expected_sources":[]}

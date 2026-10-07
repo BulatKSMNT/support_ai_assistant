@@ -1,0 +1,45 @@
+name: support-ai-assistant
+
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8010:8010"
+    env_file: .env
+    environment:
+      RAG_DATA_DIR: /data
+      RAG_OLLAMA_URL: http://ollama:11434
+      RAG_QDRANT_URL: http://qdrant:6333
+    volumes:
+      - assistant_data:/data
+    depends_on:
+      - ollama
+      - qdrant
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8010/health/live', timeout=3)"]
+      interval: 20s
+      timeout: 5s
+      retries: 3
+
+  ollama:
+    image: ollama/ollama@sha256:9d30908e41144b1f1da89b9d8e33c07e4aeb43ff41a8660241b1686e2cc330ad
+    ports:
+      - "127.0.0.1:11435:11434"
+    environment:
+      OLLAMA_NUM_PARALLEL: "1"
+      OLLAMA_MAX_LOADED_MODELS: "1"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant@sha256:b7b0444c4c351c970b98e90a6f89c2ee4287c65b44e52b4cb503fa5b2aa927ad
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+
+volumes:
+  assistant_data:
+  ollama_models:
+  qdrant_data:

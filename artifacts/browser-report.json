@@ -1,0 +1,16 @@
+{
+  "mode": "isolated lexical/extractive",
+  "passed": true,
+  "checks": [
+    "authentication",
+    "upload",
+    "answer with source",
+    "source preview",
+    "mobile overflow",
+    "version update",
+    "HTML escaped",
+    "delete",
+    "empty knowledge refusal"
+  ],
+  "javascript_errors": []
+}

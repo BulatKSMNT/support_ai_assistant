@@ -1,0 +1,714 @@
+{
+  "measured_at": "2026-10-07T09:58:50.989363+00:00",
+  "scope": "synthetic retrieval smoke benchmark",
+  "warning": "Not a held-out business evaluation; no answer quality or production claims.",
+  "modes": {
+    "lexical": {
+      "recall_at_5_chunks": 1.0,
+      "mrr_documents_within_5_chunks": 0.963,
+      "empty_result_rate_on_unrelated": 1,
+      "p50_ms": 19.8,
+      "p95_ms": 25.5,
+      "answerable_questions": 18,
+      "unrelated_questions": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-products",
+            "demo-delivery",
+            "demo-warranty",
+            "demo-payment"
+          ],
+          "latency_ms": 22.1
+        },
+        {
+          "id": "q02",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-products",
+            "demo-payment",
+            "demo-delivery",
+            "demo-warranty"
+          ],
+          "latency_ms": 18.7
+        },
+        {
+          "id": "q03",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-delivery",
+            "demo-warranty",
+            "demo-products"
+          ],
+          "latency_ms": 19.8
+        },
+        {
+          "id": "q04",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-returns"
+          ],
+          "latency_ms": 19.8
+        },
+        {
+          "id": "q05",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 20.2
+        },
+        {
+          "id": "q06",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-warranty",
+            "demo-returns",
+            "demo-intake"
+          ],
+          "latency_ms": 23.6
+        },
+        {
+          "id": "q07",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-warranty",
+            "demo-returns",
+            "demo-payment",
+            "demo-products"
+          ],
+          "latency_ms": 18.7
+        },
+        {
+          "id": "q08",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns",
+            "demo-warranty"
+          ],
+          "latency_ms": 20.2
+        },
+        {
+          "id": "q09",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns",
+            "demo-delivery"
+          ],
+          "latency_ms": 19.7
+        },
+        {
+          "id": "q10",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty",
+            "demo-returns",
+            "demo-delivery",
+            "demo-products",
+            "demo-intake"
+          ],
+          "latency_ms": 20.6
+        },
+        {
+          "id": "q11",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty",
+            "demo-products",
+            "demo-intake"
+          ],
+          "latency_ms": 19.1
+        },
+        {
+          "id": "q12",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty",
+            "demo-delivery",
+            "demo-returns",
+            "demo-products",
+            "demo-payment"
+          ],
+          "latency_ms": 18.8
+        },
+        {
+          "id": "q13",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 20.9
+        },
+        {
+          "id": "q14",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 28.8
+        },
+        {
+          "id": "q15",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 25.5
+        },
+        {
+          "id": "q16",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment"
+          ],
+          "latency_ms": 19.2
+        },
+        {
+          "id": "q17",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment",
+            "demo-returns",
+            "demo-warranty"
+          ],
+          "latency_ms": 24.9
+        },
+        {
+          "id": "q18",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment",
+            "demo-warranty"
+          ],
+          "latency_ms": 20.2
+        },
+        {
+          "id": "n01",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 19.7
+        },
+        {
+          "id": "n02",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 17.7
+        },
+        {
+          "id": "n03",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 19.0
+        },
+        {
+          "id": "n04",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 18.5
+        }
+      ]
+    },
+    "vector": {
+      "recall_at_5_chunks": 0.7778,
+      "mrr_documents_within_5_chunks": 0.7778,
+      "empty_result_rate_on_unrelated": 1,
+      "p50_ms": 252.6,
+      "p95_ms": 299.4,
+      "answerable_questions": 18,
+      "unrelated_questions": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake"
+          ],
+          "latency_ms": 280.6
+        },
+        {
+          "id": "q02",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake"
+          ],
+          "latency_ms": 243.8
+        },
+        {
+          "id": "q03",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake"
+          ],
+          "latency_ms": 223.9
+        },
+        {
+          "id": "q04",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 270.7
+        },
+        {
+          "id": "q05",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 249.9
+        },
+        {
+          "id": "q06",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 306.6
+        },
+        {
+          "id": "q07",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns"
+          ],
+          "latency_ms": 225.6
+        },
+        {
+          "id": "q08",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns"
+          ],
+          "latency_ms": 299.4
+        },
+        {
+          "id": "q09",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [],
+          "latency_ms": 224.2
+        },
+        {
+          "id": "q10",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty"
+          ],
+          "latency_ms": 258.2
+        },
+        {
+          "id": "q11",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty"
+          ],
+          "latency_ms": 232.2
+        },
+        {
+          "id": "q12",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 267.0
+        },
+        {
+          "id": "q13",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 258.9
+        },
+        {
+          "id": "q14",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 254.5
+        },
+        {
+          "id": "q15",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 258.2
+        },
+        {
+          "id": "q16",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment"
+          ],
+          "latency_ms": 250.8
+        },
+        {
+          "id": "q17",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [],
+          "latency_ms": 266.9
+        },
+        {
+          "id": "q18",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [],
+          "latency_ms": 239.3
+        },
+        {
+          "id": "n01",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 243.2
+        },
+        {
+          "id": "n02",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 238.7
+        },
+        {
+          "id": "n03",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 254.3
+        },
+        {
+          "id": "n04",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 239.3
+        }
+      ]
+    },
+    "hybrid": {
+      "recall_at_5_chunks": 1.0,
+      "mrr_documents_within_5_chunks": 0.9722,
+      "empty_result_rate_on_unrelated": 1,
+      "p50_ms": 273.1,
+      "p95_ms": 308.1,
+      "answerable_questions": 18,
+      "unrelated_questions": 4,
+      "cases": [
+        {
+          "id": "q01",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-products",
+            "demo-delivery",
+            "demo-warranty",
+            "demo-payment"
+          ],
+          "latency_ms": 284.3
+        },
+        {
+          "id": "q02",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-products",
+            "demo-payment",
+            "demo-delivery",
+            "demo-warranty"
+          ],
+          "latency_ms": 264.3
+        },
+        {
+          "id": "q03",
+          "expected": [
+            "demo-intake"
+          ],
+          "returned": [
+            "demo-intake",
+            "demo-delivery",
+            "demo-warranty",
+            "demo-products"
+          ],
+          "latency_ms": 292.6
+        },
+        {
+          "id": "q04",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-returns"
+          ],
+          "latency_ms": 265.2
+        },
+        {
+          "id": "q05",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery"
+          ],
+          "latency_ms": 270.2
+        },
+        {
+          "id": "q06",
+          "expected": [
+            "demo-delivery"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-warranty",
+            "demo-returns",
+            "demo-intake"
+          ],
+          "latency_ms": 267.5
+        },
+        {
+          "id": "q07",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns",
+            "demo-delivery",
+            "demo-warranty",
+            "demo-payment",
+            "demo-products"
+          ],
+          "latency_ms": 279.2
+        },
+        {
+          "id": "q08",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns",
+            "demo-warranty"
+          ],
+          "latency_ms": 256.5
+        },
+        {
+          "id": "q09",
+          "expected": [
+            "demo-returns"
+          ],
+          "returned": [
+            "demo-returns",
+            "demo-delivery"
+          ],
+          "latency_ms": 278.3
+        },
+        {
+          "id": "q10",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty",
+            "demo-returns",
+            "demo-delivery",
+            "demo-products",
+            "demo-intake"
+          ],
+          "latency_ms": 280.6
+        },
+        {
+          "id": "q11",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-warranty",
+            "demo-products",
+            "demo-intake"
+          ],
+          "latency_ms": 270.0
+        },
+        {
+          "id": "q12",
+          "expected": [
+            "demo-warranty"
+          ],
+          "returned": [
+            "demo-delivery",
+            "demo-warranty",
+            "demo-returns",
+            "demo-products",
+            "demo-payment"
+          ],
+          "latency_ms": 253.9
+        },
+        {
+          "id": "q13",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 274.3
+        },
+        {
+          "id": "q14",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 274.4
+        },
+        {
+          "id": "q15",
+          "expected": [
+            "demo-products"
+          ],
+          "returned": [
+            "demo-products"
+          ],
+          "latency_ms": 273.8
+        },
+        {
+          "id": "q16",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment"
+          ],
+          "latency_ms": 259.4
+        },
+        {
+          "id": "q17",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment",
+            "demo-returns",
+            "demo-warranty"
+          ],
+          "latency_ms": 272.4
+        },
+        {
+          "id": "q18",
+          "expected": [
+            "demo-payment"
+          ],
+          "returned": [
+            "demo-payment",
+            "demo-warranty"
+          ],
+          "latency_ms": 311.2
+        },
+        {
+          "id": "n01",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 267.3
+        },
+        {
+          "id": "n02",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 268.8
+        },
+        {
+          "id": "n03",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 289.1
+        },
+        {
+          "id": "n04",
+          "expected": [],
+          "returned": [],
+          "latency_ms": 308.1
+        }
+      ]
+    }
+  }
+}
